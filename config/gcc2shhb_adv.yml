@@ -1,22 +1,23 @@
-DATASET: 'ShanghaiTech'
-ShanghaiTech:
+DATASET: 'gcc2shhb'
+gcc2shhb:
   #path params
-  DATA_PATH: './data/ShanghaiTech/part_A_final/'
-  TARGET_DATA_PATH: './data/ShanghaiTech/part_B_final/'
-  LOG_PATH: './exp/ShanghaiTech'
-  PRE_TRAINED_PATH: {'density':'data/5500.model','discriminator':''}
+  DATA_PATH: './datasets/gcc2shhb/gcc/'
+  TARGET_DATA_PATH: './datasets/gcc2shhb/shhb/'
+  LOG_PATH: './exp/gcc2shhb'
+  PRE_TRAINED_PATH: {'density':'pretrained/39.pth','discriminator':''}
   PERSPECTIVE_MAP: ''
   MASK_PATH: ''
 
   #net params
-  BATCH_SIZE: 16
+  BATCH_SIZE: 1
   LEARNING_RATE: 1e-6
-  EPOCH_NUM: 250000 #iter num
+  EPOCH_NUM: 50000 #iter num
   STEPS: []
   DECAY_RATE: 0.1
-  START_EPOCH: 0
+  START_EPOCH: 1
   SNAP_SHOT: 200
   TEST_SIZE: {'train':20,'test':200}
+  VAL_SIZE: 30
 
   #image operation(not use)
   FLIP: True

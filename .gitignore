@@ -106,3 +106,4 @@ venv.bak/
 # mine
 datasets/
 exp/
+pretrained/
